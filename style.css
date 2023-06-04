@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Rubik;
+}
+
+body {
+    margin: 1em;
+    background-color: rgb(255, 255, 255);
+}
+
+.portfolio-container > div {
+    padding: 3em 0;
+}
+
+.top-nav > ul {
+    display: flex;
+    gap: 1em;
+    justify-content: flex-end;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.site-header {
+    text-align: center;
+}
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.technical-skills-section > h3 {
+    text-align: center;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+}
+
+.skills-container > div > p {
+    text-align: center;
+    font-size: 16;
+    font-weight: bold;
+}
+
+.skills{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.skills > div {
+    padding: 5px 8px;
+    border-radius: 10px;
+    border: 1px solid rgb(83, 161, 212);
+}
+
+.bold-keywords {
+    font-family: Crimson;
+    font-weight: 600;
+}
