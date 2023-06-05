@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <title>Home</title>
+    <title>Andrew Ryan</title>
 </head>
 <body>
     <div class="content">
@@ -32,8 +32,8 @@
         
             <div class="technical-skills-section">
                 <h3>Skills</h3>
-                <div class="skills-container">
-                    <div class="frontend">
+                <div class="skills-grid-layout">
+                    <div class="skills-container" id="frontend">
                         <p>Frontend</p>
                         <div class="skills" id="frontend-skills">
                             <div>HTML/CSS</div>
@@ -43,7 +43,7 @@
                             <div>React</div>
                         </div>
                     </div>
-                    <div class="backend">
+                    <div class="skills-container" id="backend">
                         <p>Backend</p>
                         <div class="skills" id="backend-skills">
                             <div>Node.js</div>
@@ -51,20 +51,20 @@
                             <div>Mongoose</div>
                         </div>
                     </div>
-                    <div class="database">
-                        <p>Database</p>
+                    <div class="skills-container" id="database">
+                        <p>Databases</p>
                         <div class="skills" id="database-skills">
                             <div>MongoDB</div>
                         </div>
                     </div>
-                    <div>
+                    <div class="skills-container" id="data">
                         <p>Data</p>
                         <div class="skills" id="data-skills">
                             <div>Python</div>
                             <div>R</div>
                         </div>
                     </div>
-                    <div>
+                    <div class="skills-container" id="cloud">
                         <p>Cloud</p>
                         <div class="skills" id="cloud-skills">
                             <div>AWS</div>
@@ -82,11 +82,14 @@
                         <div class="project-description">
                             <h2>Knights Travails</h2>
                             <div class="project-description-content">
-                                <img class="demo-gif" src="/assets/knights-travails-demo.gif">
+                                <video width="300" height="300" class="demo-vid" autoplay loop muted>
+                                    <source src="/assets/knights-travails-demo.mp4" type="video/mp4">
+                                </video>
                                 <p>
                                     Knights Travails is a tangent to the shortest path problem,
                                     where a chess knight must find the shortest path from any position
-                                    on the board to a selected target.
+                                    on the board to a selected target. Drag the knight to a square and press
+                                    calculate to find the optimal path!
                                 </p>
                             </div>
                             <div class="project-links">
@@ -103,29 +106,50 @@
                         <img class="project-icon" src="/assets/omozan-icon.png">
                         <p>Amazon Clone</p>
                         <div class="project-description">
-                            <h2>Amazon Clone</h2>
+                            <h2>Amazon Clone *(WIP)</h2>
                             <div class="project-description-content">
-                                <img class="demo-gif" src="/assets/">
+                                <video width="300" height="300" class="demo-vid" autoplay loop muted>
+                                    <source src="/assets/omozan-demo.mp4" type="video/mp4">
+                                </video>
                                 <p>
-                                    Knights Travails is a tangent to the shortest path problem,
-                                    where a chess knight must find the shortest path from any position
-                                    on the board to a selected target.
+                                    Amazon clone web application built with React. You can query over 2 million unique products, add your selections to the cart, and checkout!
+                                    Product data is stored using MongoDB and session data is stored using Redis.
                                 </p>
                             </div>
                             <div class="project-links">
                                 <div class="project-button">
-                                    <a href="https://github.com/rarAndy/Knights-Travails">Source</a>
+                                    <a href="https://github.com/rarAndy/amazon-clone">Source</a>
                                 </div>
                                 <div class="project-button">
-                                    <a href="https://rarandy.github.io/Knights-Travails/">Live Demo</a>
+                                    <a>Live Demo</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="project" id="cv-builder">
+                    <div class="project" id="knights-travails">
                         <img class="project-icon" src="/assets/profile-writing-icon.png">
                         <p>CV Builder</p>
-                        <div class="project-description"></div>
+                        <div class="project-description">
+                            <h2>Curriculum Vitae Builder</h2>
+                            <div class="project-description-content">
+                                <video width="300" height="300" class="demo-vid" autoplay loop muted>
+                                    <source src="/assets/cv-demo.mp4" type="video/mp4">
+                                </video>
+                                <p>
+                                    Create your own Curriculum Vitae! Add details as you wish and preview your document live.
+                                    You can export your document as a PDF and data is automatically saved in storage.
+                                    Built with React. 
+                                </p>
+                            </div>
+                            <div class="project-links">
+                                <div class="project-button">
+                                    <a href="https://github.com/rarAndy/CV-Application">Source</a>
+                                </div>
+                                <div class="project-button">
+                                    <a href="https://rarandy.github.io/CV-Application/">Live Demo</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

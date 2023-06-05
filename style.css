@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Geologica&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -34,6 +36,7 @@ a {
 
 div h3 {
     padding-bottom: 20px;
+    font-size: 24px;
 }
 
 .site-header {
@@ -46,24 +49,40 @@ div h3 {
     align-items: center;
 }
 
+.technical-skills-section {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin: 0 10vw;
+}
+
 .technical-skills-section > h3 {
     text-align: center;
 }
 
-.skills-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.skills-grid-layout {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
     gap: 2em;
 }
 
-.skills-container > div > p {
+.skills-grid-layout > div > p {
     text-align: center;
     font-size: 16;
     font-weight: bold;
 }
 
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 22vw;
+}
+
 .skills{
     display: flex;
+    flex-flow: row wrap;
     justify-content: center;
     gap: 1em;
 }
@@ -79,9 +98,10 @@ div h3 {
 
 .projects-container {
     position: relative;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    justify-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 5em;
+    justify-content: center;
     align-items: center;
 }
 
