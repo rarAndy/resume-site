@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Geologica&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -27,11 +25,17 @@ a {
 }
 
 .top-nav > ul {
+    margin: 0 15vw;
     display: flex;
-    gap: 1em;
+    gap: 1.5em;
     justify-content: flex-end;
     list-style-type: none;
     text-decoration: none;
+}
+
+li:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 div h3 {
@@ -233,4 +237,109 @@ div h3 {
 .project-button:hover {
     scale: 103%;
     cursor: pointer;
+}
+
+.work-experience-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.company-section {
+    margin: 0 15vw;
+    position: relative;
+}
+
+.company-section img {
+    width: 35px;
+}
+
+.company-details {
+    display: flex;
+    gap: 1em;
+}
+
+.company-employer {
+    font-size: 18px;
+}
+
+.company-role {
+    padding-top: 2em;
+}
+
+.role-description {
+    padding-top: 1em;
+}
+
+.education-section {
+    margin: 0 15vw;
+}
+
+.education-section > h3 {
+    text-align: center;
+}
+
+.certifications-section {
+    margin: 0 15vw;
+}
+
+.certifications-section > h3{
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 100;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 100;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.scroller {
+    position: sticky;
+    display: none;
+    float: right;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgb(0, 0, 0);
+    bottom: 50px;
+    right: 50px;
+}
+
+.scroller > img {
+    width: 25px;
+}
+
+.scroller.active {
+    display: flex;
+    animation-name: fadeIn;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+.scroller.inactive {
+    display: flex;
+    animation-name: fadeOut;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+.scroller:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 6px 1px rgba(82, 82, 82, 0.5);
 }

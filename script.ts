@@ -1,5 +1,6 @@
 const wrapper = document.querySelector('.wrapper')
 const projectContainers = document.querySelectorAll('.project')
+const scroller = document.querySelector('.scroller')
 
 projectContainers.forEach((project) => {
     project.addEventListener('click', () => {
@@ -16,3 +17,42 @@ wrapper.addEventListener('click', () => {
     })
 })
 
+document.querySelector('#home-nav').addEventListener('click', () => {
+    document.getElementById('top').scrollIntoView({behavior: "smooth"})
+})
+
+document.querySelector('#about-nav').addEventListener('click', function () {
+    document.getElementById('about-section').scrollIntoView({ behavior: "smooth" });
+});
+
+document.querySelector('#projects-nav').addEventListener('click', function () {
+    document.getElementById('projects-section').scrollIntoView({ behavior: "smooth" });
+});
+
+document.querySelector('#experience-nav').addEventListener('click', function () {
+    document.getElementById('work-experience-section').scrollIntoView({ behavior: "smooth" });
+});
+
+document.querySelector('#education-nav').addEventListener('click', () => {
+    document.getElementById('education-section').scrollIntoView({behavior: "smooth"})
+})
+
+window.onscroll = function() {scrollToTop()};
+
+function scrollToTop() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        scroller.classList.add('active');
+        scroller.classList.remove('inactive');
+    } else {
+        if (scroller.classList.contains('active')) {
+            scroller.classList.remove('active');
+            scroller.classList.add('inactive');
+        } else {
+            scroller.classList.remove('active')
+        }  
+    }
+}
+
+document.querySelector('.scroller').addEventListener('click', () => {
+    document.getElementById('top').scrollIntoView({behavior: "smooth"})
+})
