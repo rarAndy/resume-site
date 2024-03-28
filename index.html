@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
     <script src="script.js" defer></script>
     <title>Andrew Ryan</title>
 </head>
@@ -16,74 +16,34 @@
                 <li id="home-nav">Home</li>
                 <li id="about-nav">About</li>
                 <li id="projects-nav">Projects</li>
-                <li id="experience-nav">Experience</li>
-                <li id="education-nav">Education</li>
             </ul>
         </nav>
         <div class="portfolio-container">
             <div class="site-header">
                 <h1>Andrew Ryan</h1>
-                <h2>Fullstack Developer</h2>
             </div>
+            <img class="profile-pic" src="./assets/snowman-pic.jpg">
             <div class="about-section" id="about-section">
                 <h3>About</h3>
-                <p>Highly motivated web developer with a passion for creating interesting projects.</p>
+                <p>Welcome! This is a hub for anything I've done or found interesting. I'll post projects related to web development, circuits, and data science on here that you can check out. </p>
             </div>
         
-            <div class="technical-skills-section" id="technical-skills-section">
-                <h3>Skills</h3>
-                <div class="skills-grid-layout">
-                    <div class="skills-container" id="frontend">
-                        <p>Frontend</p>
-                        <div class="skills" id="frontend-skills">
-                            <div>HTML/CSS</div>
-                            <div>Sass</div>
-                            <div>Javascript</div>
-                            <div>Typescript</div>
-                            <div>React</div>
-                        </div>
-                    </div>
-                    <div class="skills-container" id="backend">
-                        <p>Backend</p>
-                        <div class="skills" id="backend-skills">
-                            <div>Node.js</div>
-                            <div>Express</div>
-                            <div>Mongoose</div>
-                        </div>
-                    </div>
-                    <div class="skills-container" id="database">
-                        <p>Databases</p>
-                        <div class="skills" id="database-skills">
-                            <div>MongoDB</div>
-                        </div>
-                    </div>
-                    <div class="skills-container" id="data">
-                        <p>Data</p>
-                        <div class="skills" id="data-skills">
-                            <div>Python</div>
-                            <div>R</div>
-                        </div>
-                    </div>
-                    <div class="skills-container" id="cloud">
-                        <p>Cloud</p>
-                        <div class="skills" id="cloud-skills">
-                            <div>AWS</div>
-                        </div>
-                    </div>
-                </div>
-        
-            </div>
+            
             <div class="projects-section" id="projects-section">
                 <h3>Projects</h3>
+                <h4>Web Development</h3>
                 <div class="projects-container">
                     <div class="project" id="knights-travails">
-                        <img class="project-icon" src="/assets/knights-travails-icon.png">
-                        <p>Knights Travails</p>
+                        <div class="project-box">
+                            <img class="project-icon" src="./assets/knights-travails-icon.png">
+                            <p>Knights Travails</p>
+                        </div>
                         <div class="project-description">
                             <h2>Knights Travails</h2>
+                            <img class="close-icon" src="./assets/close-icon.svg">
                             <div class="project-description-content">
                                 <video width="300" height="300" class="demo-vid" autoplay loop muted>
-                                    <source src="/assets/knights-travails-demo.mp4" type="video/mp4">
+                                    <source src="./assets/knights-travails-demo.mp4" type="video/mp4">
                                 </video>
                                 <p>
                                     Knights Travails is a tangent to the shortest path problem,
@@ -103,13 +63,16 @@
                         </div>
                     </div>
                     <div class="project" id="omozan">
-                        <img class="project-icon" src="/assets/omozan-icon.png">
-                        <p>Amazon Clone</p>
+                        <div class="project-box">
+                            <img class="project-icon" src="./assets/omozan-icon.png">
+                            <p>Amazon Clone</p>
+                        </div>
                         <div class="project-description">
                             <h2>Amazon Clone *(WIP)</h2>
+                            <img class="close-icon" src="./assets/close-icon.svg">
                             <div class="project-description-content">
                                 <video width="300" height="300" class="demo-vid" autoplay loop muted>
-                                    <source src="/assets/omozan-demo.mp4" type="video/mp4">
+                                    <source src="./assets/omozan-demo.mp4" type="video/mp4">
                                 </video>
                                 <p>
                                     Amazon clone web application built with React. You can query over 2 million unique products, add your selections to the cart, and checkout!
@@ -127,13 +90,16 @@
                         </div>
                     </div>
                     <div class="project" id="knights-travails">
-                        <img class="project-icon" src="/assets/profile-writing-icon.png">
-                        <p>CV Builder</p>
+                        <div class="project-box">
+                            <img class="project-icon" src="./assets/profile-writing-icon.png">
+                            <p>CV Builder</p>
+                        </div>
                         <div class="project-description">
                             <h2>Curriculum Vitae Builder</h2>
+                            <img class="close-icon" src="./assets/close-icon.svg">
                             <div class="project-description-content">
                                 <video width="300" height="300" class="demo-vid" autoplay loop muted>
-                                    <source src="/assets/cv-demo.mp4" type="video/mp4">
+                                    <source src="./assets/cv-demo.mp4" type="video/mp4">
                                 </video>
                                 <p>
                                     Create your own Curriculum Vitae! Add details as you wish and preview your document live.
@@ -153,54 +119,11 @@
                     </div>
                 </div>
             </div>
-            <div class="work-experience-section" id="work-experience-section">
-                <h3>Relevant experience</h3>
-        
-                <div class="company-section">
-                    <div class="company-details">
-                        <img src="assets/building-icon.svg">
-                        <div>
-                            <p class="company-employer">James Madison University</p>
-                            <p><span style="font-style: italic;">Harrisonburg, VA</span><span style="padding: 0 1em">2019-2021</span></p>
-                        </div>
-                    </div>
-                    <div class="company-role">
-                        <h4 class="role-title">Teaching Assistant</h4>
-                        <p class="role-date">2019-2020</p>
-                        <p class="role-description">
-                            ● TA for ISAT 251 - Introduction to Statistics with R. For two semesters, I assisted with grading, lab work, and
-                            held office hours for students to come and ask questions related to statistics and R.
-                        </p>
-                    </div>
-                    <div class="company-role">
-                        <h4 class="role-title">Senior Capstone - Integration of Systems Engineering and Biomimicry</h4>
-                        <p class="role-date">2019-2021</p>
-                        <p class="role-description">
-                            ● Merged the fields of systems engineering and bio-inspired design into a generalized framework to create
-                            facility layout design solutions that are able to reduce shopfloor intensity by ~14%. Presented case
-                            at the ASEM International Annual Conference in 2020.
-                        </p>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="education-section" id="education-section">
-                <h3>Education</h3>
-                <p style="font-weight: bold;">B.S. Integrated Science and Technology</p>
-                <p>Concentrations in Energy and Manufacturing Systems</p>
-                <p>James Madison University (2021), <span style="font-style: italic;">Harrisonburg, VA</span></p>
-                <p>Major GPA 3.51/4.0</p>
-                <p>Relevant coursework: Telecom, Networking & Security, Cyber-Physical Industry, Topics in Applied Statistics</p>
-            </div>
-            <div class="certifications-section" id="certifications-section">
-                <h3>Certifications</h3>
-                <p>AWS Certified Cloud Practitioner | 2023</p>
-            </div>
         </div>
     </div>
     <div class="wrapper"></div>
     <div class="scroller">
-        <img src="assets/angle-top-icon.svg">
+        <img src="./assets/angle-top-icon.svg">
     </div>
 </body>
 </html>

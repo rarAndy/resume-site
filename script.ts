@@ -1,13 +1,22 @@
 const wrapper = document.querySelector('.wrapper')
 const projectContainers = document.querySelectorAll('.project')
 const scroller = document.querySelector('.scroller')
+const closeIcons = document.querySelectorAll('.close-icon')
 
 projectContainers.forEach((project) => {
     project.addEventListener('click', () => {
-        console.log('clicked')
         wrapper.classList.add('active')
         project.querySelector('.project-description').classList.add('active')
     }) 
+})
+
+closeIcons.forEach((icon) => {
+    icon.addEventListener('click', () => {
+        wrapper.classList.remove('active')
+        document.querySelectorAll('.project-description').forEach((e) => {
+            e.classList.remove('active')
+        })
+    })
 })
 
 wrapper.addEventListener('click', () => {
@@ -29,14 +38,6 @@ document.querySelector('#projects-nav').addEventListener('click', function () {
     document.getElementById('projects-section').scrollIntoView({ behavior: "smooth" });
 });
 
-document.querySelector('#experience-nav').addEventListener('click', function () {
-    document.getElementById('work-experience-section').scrollIntoView({ behavior: "smooth" });
-});
-
-document.querySelector('#education-nav').addEventListener('click', () => {
-    document.getElementById('education-section').scrollIntoView({behavior: "smooth"})
-})
-
 window.onscroll = function() {scrollToTop()};
 
 function scrollToTop() {
@@ -55,4 +56,4 @@ function scrollToTop() {
 
 document.querySelector('.scroller').addEventListener('click', () => {
     document.getElementById('top').scrollIntoView({behavior: "smooth"})
-})
+});

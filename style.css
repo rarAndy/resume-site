@@ -11,13 +11,21 @@ body {
     height: 100%;
 }
 
+.profile-pic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    border-radius: 50%;
+}
+
 a {
     text-decoration: none;
     color: black
 }
 
 .content {
-    margin: 1em;
+    margin: 1em 5em;
 }
 
 .portfolio-container > div {
@@ -25,7 +33,7 @@ a {
 }
 
 .top-nav > ul {
-    margin: 0 15vw;
+    margin-left: 0;
     display: flex;
     gap: 1.5em;
     justify-content: flex-end;
@@ -43,6 +51,11 @@ div h3 {
     font-size: 24px;
 }
 
+div h4 {
+    padding-bottom: 20px;
+    font-size: 18px;
+}
+
 .site-header {
     text-align: center;
 }
@@ -53,49 +66,6 @@ div h3 {
     align-items: center;
 }
 
-.technical-skills-section {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    margin: 0 10vw;
-}
-
-.technical-skills-section > h3 {
-    text-align: center;
-}
-
-.skills-grid-layout {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    gap: 2em;
-}
-
-.skills-grid-layout > div > p {
-    text-align: center;
-    font-size: 16;
-    font-weight: bold;
-}
-
-.skills-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    width: 22vw;
-}
-
-.skills{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    gap: 1em;
-}
-
-.skills > div {
-    padding: 5px 8px;
-    border-radius: 10px;
-    border: 1px solid rgb(83, 161, 212);
-}
 .projects-section {
     text-align: center;
 }
@@ -114,27 +84,38 @@ div h3 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 250px;
-    height: 250px;
+    position: relative;
+    width: 200px;
+    height: 200px;
     border: 1px solid rgb(128, 128, 128);
     border-radius: 10px;
     
 }
 
-.project img{
+.project-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.project-box > img{
     position: relative;
     width: 125px;
 }
 
-.project > p {
+.project-box > p {
     display: none;
     position: absolute;
-    bottom: 30px;
+    bottom: 15px;
     font-weight: bold;
     letter-spacing: 0.5px;
 }
 
-.project:hover {
+.project-box:hover {
     box-shadow: inset 0px 0px 9px 1px rgb(218, 218, 218);
     border-color: rgb(131, 131, 131);
     cursor: pointer;
@@ -146,7 +127,7 @@ div h3 {
     }
 
     to {
-        transform: translateY(-30px);
+        transform: translateY(-15px);
     }
 }
 
@@ -160,17 +141,17 @@ div h3 {
      }
 }
 
-.project:hover > img{
+.project-box:hover > img{
     animation-name: projectfloat;
     animation-duration: 0.6s;
     animation-fill-mode: forwards;
 }
 
-.project:hover > p {
+.project-box:hover > p {
     animation-name: fadein;
     animation-duration: 0.3s;
     animation-fill-mode: forwards;
-    display: block
+    display: block;
 }
 
 .wrapper {
@@ -209,6 +190,18 @@ div h3 {
     cursor: default;
 }
 
+.close-icon {
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    scale: 15%;
+}
+
+.close-icon:hover {
+    scale: 16.5%;
+    cursor: pointer;
+}
+
 .project-description.active {
     display: block;
     z-index: 50;
@@ -237,54 +230,6 @@ div h3 {
 .project-button:hover {
     scale: 103%;
     cursor: pointer;
-}
-
-.work-experience-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.company-section {
-    margin: 0 15vw;
-    position: relative;
-}
-
-.company-section img {
-    width: 35px;
-}
-
-.company-details {
-    display: flex;
-    gap: 1em;
-}
-
-.company-employer {
-    font-size: 18px;
-}
-
-.company-role {
-    padding-top: 2em;
-}
-
-.role-description {
-    padding-top: 1em;
-}
-
-.education-section {
-    margin: 0 15vw;
-}
-
-.education-section > h3 {
-    text-align: center;
-}
-
-.certifications-section {
-    margin: 0 15vw;
-}
-
-.certifications-section > h3{
-    text-align: center;
 }
 
 @keyframes fadeIn {
