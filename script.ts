@@ -1,30 +1,30 @@
 const wrapper = document.querySelector('.wrapper')
-const projectContainers = document.querySelectorAll('.project')
-const scroller = document.querySelector('.scroller')
-const closeIcons = document.querySelectorAll('.close-icon')
+const projectContainers = document.querySelectorAll('.project-box');
+const scroller = document.querySelector('.scroller');
+const closeIcons = document.querySelectorAll('.close-icon');
 
-projectContainers.forEach((project) => {
-    project.addEventListener('click', () => {
-        wrapper.classList.add('active')
-        project.querySelector('.project-description').classList.add('active')
-    }) 
-})
+projectContainers.forEach(function (project) {
+    project.addEventListener('click', function () {
+        wrapper.classList.add('active');
+        project.parentNode.querySelector('.project-description').classList.add('active');
+    });
+});
 
-closeIcons.forEach((icon) => {
-    icon.addEventListener('click', () => {
-        wrapper.classList.remove('active')
-        document.querySelectorAll('.project-description').forEach((e) => {
-            e.classList.remove('active')
-        })
+closeIcons.forEach(function (icon) {
+    icon.addEventListener('click', function () {
+        wrapper.classList.remove('active');
+        document.querySelectorAll('.project-description').forEach(function (e) {
+            e.classList.remove('active');
+        }); 
     })
 })
 
-wrapper.addEventListener('click', () => {
-    wrapper.classList.remove('active')
-    document.querySelectorAll('.project-description').forEach((e) => {
-        e.classList.remove('active')
-    })
-})
+wrapper.addEventListener('click', function () {
+    wrapper.classList.remove('active');
+    document.querySelectorAll('.project-description').forEach(function (e) {
+        e.classList.remove('active');
+    });
+});
 
 document.querySelector('#home-nav').addEventListener('click', () => {
     document.getElementById('top').scrollIntoView({behavior: "smooth"})

@@ -264,6 +264,7 @@ div h4 {
     border: 2px solid rgb(0, 0, 0);
     bottom: 50px;
     right: 50px;
+    background-color: rgb(179, 210, 223);
 }
 
 .scroller > img {
