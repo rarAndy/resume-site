@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./project_style.css">
+    <link rel="stylesheet" href="../style.css">
+    <title>Andrew Ryan</title>
+</head>
+<body>
+    <div class="content">
+        <nav class="top-nav">
+            <ul>
+                <li id="home-nav"><a href="../index.html">Home</a></li>
+            </ul>
+        </nav>
+        <div class="title">
+            <h2>Project 0- Binary LED Counter</h2>
+            <img src="../assets/proj0.gif">
+        </div>
+        <div class="project-info">
+            <div class="whatitdoes">
+                <h4>What it does</h4>
+                <ul style="padding-left: 3em;">
+                    <li>Press the button to count up in binary, represented by LED pins</li>
+                    <li>Type a number in the IDE to display the binary equivalent</li>
+                </ul>
+            </div>
+            <div class="intro">
+                <h4>Intro</h4>
+                <p>This is my first circuits project. I wanted to make this for several reasons:
+                    <ol style="padding-left: 3em;">
+                        <li>To practice with basic electrical components</li>
+                        <li>To get familiar with using an Arduino and the IDE</li>
+                        <li>To make something that feels like a precursor to bitwise operations and computing</li>
+                    </ol>
+                    Reason 3 isn't accurate at all- the project has little to do with bitwise operations  or computing, but it's something I'll explore more with in the future.
+                </p>
+            </div>
+            <div class="schematic">
+                <h4>Schematic</h4>
+                <img class="schematic-img" src="../assets/binary-schematic.svg">
+                <!-- Made with circuit-diagram.org -->
+            </div>
+            <div class="code-info">
+                <h4>Code</h4>
+                <pre class="codeblock">
+                    <code class="lang-arduino">
+                        int button = 2;
+                        int LED_1 = 4;
+                        int LED_2 = 5;
+                        int LED_3 = 6;
+                        int LED_4 = 7;
+                        int LED_5 = 8;
+                        int LED_6 = 9;
+                        int LED_7 = 10;
+                        int LED_8 = 11;
+                        void setup() {
+                            pinMode(button, INPUT);
+                            pinMode(LED_1, OUTPUT);
+                            pinMode(LED_2, OUTPUT);
+                            pinMode(LED_3, OUTPUT);
+                            pinMode(LED_4, OUTPUT);
+                            pinMode(LED_5, OUTPUT);
+                            pinMode(LED_6, OUTPUT);
+                            pinMode(LED_7, OUTPUT);
+                            pinMode(LED_8, OUTPUT);
+                            Serial.begin(9600);
+                        }
+                        int count = 0;
+                        int previous = 0;
+                        int numLEDs = 8;
+                        void loop() {
+                            int max = pow(2, numLEDs);
+                            int button_press = digitalRead(button);
+                            //Button press reading must go from 0 to 1 to count, preventing holding
+                            if (button_press == 1) {
+                                if (previous == 0) {
+                                    count = (count + 1) % max;
+                                }
+                            }
+                            previous = button_press;
+                            calculateBinaryPinsGen(count, numLEDs);
+                        }
+                        void calculateBinaryPins(int num) {
+                            int temp = num;
+                            Serial.println(temp);
+                            if (temp - pow(2, 7) >= 0) {
+                                temp -= pow(2, 7);
+                                digitalWrite(LED_8, 1);
+                            } else {digitalWrite(LED_8, 0);}
+                            if (temp - pow(2, 6) >= 0) {
+                                temp -= pow(2, 6);
+                                digitalWrite(LED_7, 1);
+                            } else {digitalWrite(LED_7, 0);}
+                            if (temp - pow(2, 5) >= 0) {
+                                temp -= pow(2, 5);
+                                digitalWrite(LED_6, 1);
+                            } else {digitalWrite(LED_6, 0);}
+                            if (temp - pow(2, 4) >= 0) {
+                                temp -= pow(2, 4);
+                                digitalWrite(LED_5, 1);
+                            } else {digitalWrite(LED_5, 0);}
+                            if (temp - pow(2, 3) >= 0) {
+                                temp -= pow(2, 3);
+                                digitalWrite(LED_4, 1);
+                            } else {digitalWrite(LED_4, 0);}
+                            if (temp - pow(2, 2) >= 0) {
+                                temp -= pow(2, 2);
+                                digitalWrite(LED_3, 1);
+                            } else {digitalWrite(LED_3, 0);}
+                            if (temp - pow(2, 1) >= 0) {
+                                temp -= pow(2, 1);
+                                digitalWrite(LED_2, 1);
+                            } else {digitalWrite(LED_2, 0);}
+                            if (temp - pow(2, 0) >= 0) {
+                                temp -= pow(2, 0);
+                                digitalWrite(LED_1, 1);
+                            } else {digitalWrite(LED_1, 0);}
+                        }
+                        void calculateBinaryPinsGen(int num, int pins) {
+                            //General formula based on number of pins
+                            int LEDs[pins] = {LED_1, LED_2, LED_3, LED_4, LED_5, LED_6, LED_7, LED_8};
+                            int temp = num;
+                            Serial.println(temp);
+                            for (int i = pins - 1; i >= 0; --i) {
+                                if (temp - pow(2, i) >= 0) {
+                                    temp -= pow(2, i);
+                                    digitalWrite(LEDs[i], 1);
+                                } else {digitalWrite(LEDs[i], 0);}
+                            }
+                        }
+                    </code>
+                </pre>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

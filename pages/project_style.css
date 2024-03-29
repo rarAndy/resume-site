@@ -1,0 +1,23 @@
+@font-face {
+    font-family: Consolas;
+    src: url('../assets/Consolas.ttf');
+}
+
+.schematic-img {
+    width: 500px;
+    height: auto;
+}
+
+.codeblock {
+    max-height: 500px;
+    overflow-y: auto;
+    background-color: #fff;
+}
+
+.lang-arduino {
+    display: block;
+    font-family: Consolas;
+    color: #434343;
+    margin-left: -160px;
+}
+

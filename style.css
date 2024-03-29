@@ -24,6 +24,10 @@ a {
     color: black
 }
 
+.url-link {
+    color: blue;
+}
+
 .content {
     margin: 1em 5em;
 }
@@ -41,7 +45,7 @@ a {
     text-decoration: none;
 }
 
-li:hover {
+.top-nav > ul > li:hover {
     text-decoration: underline;
     cursor: pointer;
 }
@@ -52,6 +56,7 @@ div h3 {
 }
 
 div h4 {
+    padding-top: 2em;
     padding-bottom: 20px;
     font-size: 18px;
 }
@@ -70,7 +75,7 @@ div h4 {
     text-align: center;
 }
 
-.projects-container {
+.webdev-projects-container {
     position: relative;
     display: flex;
     flex-flow: row wrap;
